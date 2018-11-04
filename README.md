@@ -44,6 +44,11 @@ Binary Tree
 `BST256   m_T256[5];`   //this tree for wstring length of 12<br/>
 
 #### And more trees
+`wstring  ws = L"你好嗎";`<br/>
+`int KeySum = 0;`<br/>
+`for(int i = 0;i<ws.length();i++)`<br/>
+`    KeySum += ws[i];`<br/>
+`KeySum = KeySum%500;`<br/>
 `BST64    m_T64[0][0-499];`   //this 500 trees shared all the wstring length of 1<br/>
 `BST64    m_T64[1][0-499];`   //this 500 trees shared all the wstring length of 2<br/>
 `BST64    m_T64[2][0-499];`   //this 500 trees shared all the wstring length of 3<br/>
