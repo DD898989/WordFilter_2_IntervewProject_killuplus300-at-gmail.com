@@ -80,6 +80,9 @@ Analysis
 ##### x-axis　　　: input length(chars)
 ##### y-axis　　　: average finished time(second)
 ![](https://github.com/DD898989/Pictures/blob/master/t1.png)<br/>
+As expetected, Time ∝ Input
+
+
 
 
 ##### input length: 550
@@ -87,6 +90,10 @@ Analysis
 ##### x-axis　　　: trees
 ##### y-axis　　　: average finished time(second)
 ![](https://github.com/DD898989/Pictures/blob/master/t2.png)<br/>
+Time and trees should be in inverse proportion but it doesn't, it depends on how filter cases `KeySum` looks like
+ps. the memory doesn't seem to have relation with trees
+
+
 
 
 ##### input length: 550
@@ -94,3 +101,6 @@ Analysis
 ##### x-axis　　　: filter cases
 ##### y-axis　　　: average finished time(second)
 ![](https://github.com/DD898989/Pictures/blob/master/t3.png)<br/>
+As expetected, Time ∝ filter cases
+
+
