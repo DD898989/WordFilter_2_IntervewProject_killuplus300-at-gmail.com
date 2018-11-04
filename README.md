@@ -29,7 +29,7 @@ Binary Tree
 `BST128 m_T128;`   this tree for wstring length of 4-6  
 `BST256 m_T256;`   this tree for wstring length of 7-12  
 
-#### Generally, more trees mean less time in search, remove, and add:
+#### Generally, more trees means less time in search, remove, and add:
 `BST64    m_T64[0];`    //this tree for wstring length of 1<br/>
 `BST64    m_T64[1];`    //this tree for wstring length of 2<br/>
 `BST64    m_T64[2];`    //this tree for wstring length of 3<br/>
