@@ -48,7 +48,7 @@ wstring  ws = L"你好嗎";<br/>
 int KeySum = 0;<br/>
 for(int i = 0;i<ws.length();i++)<br/>
 　　KeySum += ws[i];<br/>
-KeySum = KeySum%500;<br/>
+KeySum = KeySum%500;<br/> // KeySum is a `key` of column for an 2D BST array
 `BST64    m_T64[0][0-499];`   //this 500 trees shared all the wstring length of 1<br/>
 `BST64    m_T64[1][0-499];`   //this 500 trees shared all the wstring length of 2<br/>
 `BST64    m_T64[2][0-499];`   //this 500 trees shared all the wstring length of 3<br/>
