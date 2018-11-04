@@ -64,11 +64,11 @@ KeySum = KeySum%500;<br/> // KeySum is a `key` of column for an 2D BST array<br/
 
 Search logic
 --
-###7 Chars Researcher
+###7 Chars Searcher
 
 ![](https://github.com/DD898989/Pictures/blob/master/7.png)<br/>
 
-###3 Chars Researcher
+###3 Chars Searcher
 
 ![](https://github.com/DD898989/Pictures/blob/master/3.png)<br/>
 
