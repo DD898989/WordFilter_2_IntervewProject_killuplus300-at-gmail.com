@@ -7,17 +7,17 @@ Wstring To Number
 好 = 22909 = 0X597D  
 嗎 = 21966 = 0X55CE  
   
-#### wstring length less than 4 could be stored by a 64 bits type  
+#### wstring length less than 4 could be stored in a 64 bits type  
   
 ex:  
 wstring  ws = L"你好嗎";  
 uint64_t n = 0;  
 for(int i = 0;i<3;i++)  
-　　n += (n<<20)+ws[i]; //n = 0X4F600597D055CE  
+　　n += (n<<20)+ws[i]; //n = 0X4F600597D055CE, shift 20 for the max visible utf8 code
   
 #### Therefore:  
-wstring length less than 7  could be stored by a 128 bits type  
-wstring length less than 13 could be stored by a 256 bits type  
+wstring length less than 7  could be stored in a 128 bits type  
+wstring length less than 13 could be stored in a 256 bits type  
   
 Binary Tree
 --
