@@ -91,6 +91,6 @@ Analysis
 
 ##### input length: 550
 ##### trees　　　: 120
-##### x-axis　　　: input length
+##### x-axis　　　: filter cases
 ##### y-axis　　　: average finished time(second)
 ![](https://github.com/DD898989/Pictures/blob/master/t3.png)<br/>
