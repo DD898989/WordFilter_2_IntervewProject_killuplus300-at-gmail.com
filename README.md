@@ -72,3 +72,25 @@ Search logic
 
 ![](https://github.com/DD898989/Pictures/blob/master/3.png)<br/>
 
+
+Analysis
+--
+### trees       : 6000
+### filter cases: 216000
+### x-axis      : input length(chars)
+### y-axis      : average finished time(second)
+![](https://github.com/DD898989/Pictures/blob/master/t1.png)<br/>
+
+
+### input length: 550
+### filter cases: 216000
+### x-axis      : trees
+### y-axis      : average finished time(second)
+![](https://github.com/DD898989/Pictures/blob/master/t2.png)<br/>
+
+
+### input length: 550
+### trees       : 120
+### x-axis      : input length
+### y-axis      : average finished time(second)
+![](https://github.com/DD898989/Pictures/blob/master/t3.png)<br/>
