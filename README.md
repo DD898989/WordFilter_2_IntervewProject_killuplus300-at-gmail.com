@@ -13,7 +13,7 @@ ex:
 wstring  ws = L"你好嗎";  
 uint64_t n = 0;  
 for(int i = 0;i<3;i++)  
-    n += (n<<20)+ws[i]; //n = 0X4F600597D055CE  
+　　n += (n<<20)+ws[i]; //n = 0X4F600597D055CE  
   
 #### Therefore:  
 wstring length less than 7  could be stored by a 128 bits type  
