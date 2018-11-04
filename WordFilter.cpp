@@ -68,7 +68,7 @@ inline bool gt256(uint256_t *number1, uint256_t *number2) {
 	return gt128(&UPPER_P(number1), &UPPER_P(number2));
 }
 #pragma endregion
-
+//---------------------------------------------------------------------------------------------------
 inline uint64_t  wsto64(wstring wsWord)
 {
 	uint64_t u64Word = 0;
@@ -76,6 +76,7 @@ inline uint64_t  wsto64(wstring wsWord)
 		u64Word = (u64Word<<20)+wsWord[i];
 	return u64Word;
 }
+//---------------------------------------------------------------------------------------------------
 inline uint128_t  wsto128(wstring wsWord)
 {
 	uint128_t u128Word;
@@ -93,6 +94,7 @@ inline uint128_t  wsto128(wstring wsWord)
 
 	return u128Word;
 }
+//---------------------------------------------------------------------------------------------------
 inline uint256_t  wsto256(wstring wsWord)
 {
 	uint128_t u128Word;
@@ -133,7 +135,7 @@ inline uint256_t  wsto256(wstring wsWord)
 
 	return u256Word;
 }
-
+//---------------------------------------------------------------------------------------------------
 class TreeNode64{
 private:
 	TreeNode64 *leftchild;
@@ -146,6 +148,7 @@ public:
 
 	friend class BST64;   
 };
+//---------------------------------------------------------------------------------------------------
 class BST64{
 private:
 	TreeNode64 *root;
@@ -261,6 +264,7 @@ public:
 		y = 0;
 	}
 };
+//---------------------------------------------------------------------------------------------------
 class TreeNode128{
 private:
 	TreeNode128 *leftchild;
@@ -272,6 +276,7 @@ public:
 	  TreeNode128(uint128_t a):leftchild(0),rightchild(0),parent(0),key(a){};
 	  friend class BST128;   
 };
+//---------------------------------------------------------------------------------------------------
 class BST128{
 private:
 	TreeNode128 *root;
@@ -387,6 +392,7 @@ public:
 		y = 0;
 	}
 };
+//---------------------------------------------------------------------------------------------------
 class TreeNode256{
 private:
 	TreeNode256 *leftchild;
@@ -398,6 +404,7 @@ public:
 	  TreeNode256(uint256_t a):leftchild(0),rightchild(0),parent(0),key(a){};
 	  friend class BST256;   
 };
+//---------------------------------------------------------------------------------------------------
 class BST256{
 private:
 	TreeNode256 *root;
@@ -513,14 +520,14 @@ public:
 		y = 0;
 	}
 };
-
-BST64 m_T64[3][TREE_NUMBER];   //3: 1~3­Ó¦rªºÅ¼¸Ü
-BST128 m_T128[3][TREE_NUMBER]; //3: 4~6­Ó¦rªºÅ¼¸Ü
-BST256 m_T256[6][TREE_NUMBER]; //6: 6~12­Ó¦rªºÅ¼¸Ü
+//---------------------------------------------------------------------------------------------------
+BST64 m_T64[3][TREE_NUMBER];   //3: 1~3å€‹å­—çš„é«’è©±
+BST128 m_T128[3][TREE_NUMBER]; //3: 4~6å€‹å­—çš„é«’è©±
+BST256 m_T256[6][TREE_NUMBER]; //6: 6~12å€‹å­—çš„é«’è©±
 //---------------------------------------------------------------------------------------------------
 void AddCmd()
 {
-	m_vCmd.push_back("¶}©l¹LÂo");	m_vCmd.push_back("¨ú¥N¦rµü");	m_vCmd.push_back("·j´M¥Ø¼Ð");	m_vCmd.push_back("²¾°£¥Ø¼Ð");	m_vCmd.push_back("·s¼W¥Ø¼Ð");	m_vCmd.push_back("Â÷¶}µ{¦¡");
+	m_vCmd.push_back("é–‹å§‹éŽæ¿¾");	m_vCmd.push_back("å–ä»£å­—è©ž");	m_vCmd.push_back("æœå°‹ç›®æ¨™");	m_vCmd.push_back("ç§»é™¤ç›®æ¨™");	m_vCmd.push_back("æ–°å¢žç›®æ¨™");	m_vCmd.push_back("é›¢é–‹ç¨‹å¼");
 }
 //---------------------------------------------------------------------------------------------------
 enum ECommand
@@ -761,7 +768,7 @@ int main()
 	string sOutputFile =sRootPath+"Output.txt";
 	string sInputFile =sRootPath+"Input.txt";
 	string sDicFile =sRootPath+"BadWords.txt";
-	wstring wsReplace = L"¡iX¡j";
+	wstring wsReplace = L"ã€Xã€‘";
 
 	//case para
 	wstring wsRemove;
@@ -769,12 +776,12 @@ int main()
 	wstring wsSearch;
 
 	locale::global(locale(""));
-	cout<<"¨ú¥N¦rµü:"; wcout<<wsReplace<<endl;
-	cout<<"¿é¥X¸ô®|:"<<sOutputFile<<endl;
-	//cout<<"¿é¤J¸ô®|:"<<sInputFile<<endl;
-	cout<<"¦r¨å¸ô®|:"<<sDicFile<<endl;
+	cout<<"å–ä»£å­—è©ž:"; wcout<<wsReplace<<endl;
+	cout<<"è¼¸å‡ºè·¯å¾‘:"<<sOutputFile<<endl;
+	//cout<<"è¼¸å…¥è·¯å¾‘:"<<sInputFile<<endl;
+	cout<<"å­—å…¸è·¯å¾‘:"<<sDicFile<<endl;
 
-	cout<<"½T»{ ¦r¨å¸ô®| ÀÉ®×«á«ö¤UenterÄ~Äò\n";
+	cout<<"ç¢ºèª å­—å…¸è·¯å¾‘ æª”æ¡ˆå¾ŒæŒ‰ä¸‹enterç¹¼çºŒ\n";
 	system("pause");
 
 	ReadBadWordDic(sDicFile);
@@ -782,7 +789,7 @@ int main()
 	while(true)
 	{
 		cout<<endl<<endl;
-		cout<<"½Ð¿é¤JCMD¡G"<<endl;
+		cout<<"è«‹è¼¸å…¥CMDï¼š"<<endl;
 		for(int i=0;i<m_vCmd.size();i++)
 			cout<<i<<"."<<m_vCmd[i]<<" ";
 		cout<<endl;
@@ -793,17 +800,17 @@ int main()
 		{
 			//---------------------------------------------
 		case (int)E_RUN:
-			//cout<<"¶}©l¹LÂo"<<endl;
+			//cout<<"é–‹å§‹éŽæ¿¾"<<endl;
 			bRun=true;
 			goto run;
 			//---------------------------------------------
 		case (int)E_REPLACE_WORD:
-			cout<<"½Ð¿é¤J "<<m_vCmd[cmd]<<" ¡G"<<endl;
+			cout<<"è«‹è¼¸å…¥ "<<m_vCmd[cmd]<<" ï¼š"<<endl;
 			wsReplace = wcinRegMatch(L"^.+$");
 			goto es;
 			//---------------------------------------------
 		case (int)E_SEARCH:
-			cout<<"½Ð¿é¤J "<<m_vCmd[cmd]<<" ¡G"<<endl;
+			cout<<"è«‹è¼¸å…¥ "<<m_vCmd[cmd]<<" ï¼š"<<endl;
 			wsSearch = wcinRegMatch(L"^.{1,12}$");
 
 			if(IsBadWord(wsSearch))
@@ -815,7 +822,7 @@ int main()
 			goto es;
 			//---------------------------------------------
 		case (int)E_REMOVE:
-			cout<<"½Ð¿é¤J "<<m_vCmd[cmd]<<" ¡G"<<endl;
+			cout<<"è«‹è¼¸å…¥ "<<m_vCmd[cmd]<<" ï¼š"<<endl;
 			wsRemove = wcinRegMatch(L"^.{1,12}$");
 			RemoveBadWord(wsRemove);
 			RemoveBadWord(wsRemove);
@@ -823,7 +830,7 @@ int main()
 			goto es;
 			//---------------------------------------------
 		case (int)E_ADD:
-			cout<<"½Ð¿é¤J "<<m_vCmd[cmd]<<" ¡G"<<endl;
+			cout<<"è«‹è¼¸å…¥ "<<m_vCmd[cmd]<<" ï¼š"<<endl;
 			wsAdd = wcinRegMatch(L"^.{1,12}$");
 			AddBadWord(wsAdd);
 			goto es;
@@ -842,18 +849,18 @@ run://run:
 		{
 			bRun = false;
 			wstring wsInput;// = Read(sInputFile);
-			cout<<endl<<"½Ð¿é¤J¹LÂo¥y¤l:"<<endl;
+			cout<<endl<<"è«‹è¼¸å…¥éŽæ¿¾å¥å­:"<<endl;
 			getline(wcin, wsInput);
 
 
-			/*­p®É¶}©l*/  static LARGE_INTEGER nFreq; static LARGE_INTEGER nBeginTime; static LARGE_INTEGER nEndTime; static int count=0;  static double timeT=0;  QueryPerformanceFrequency(&nFreq); QueryPerformanceCounter(&nBeginTime); //-----------------------------------------------------------------------------------
+			/*è¨ˆæ™‚é–‹å§‹*/  static LARGE_INTEGER nFreq; static LARGE_INTEGER nBeginTime; static LARGE_INTEGER nEndTime; static int count=0;  static double timeT=0;  QueryPerformanceFrequency(&nFreq); QueryPerformanceCounter(&nBeginTime); //-----------------------------------------------------------------------------------
 
 			int* ptr_nFilterRecord        = new int[wsInput.size()]();
 			int* ptr_nFilterRecordForMark = new int[wsInput.size()]();
 			for(int i =0;i<wsInput.length();i++)
 			{
 				int temp = wsInput[i];
-				//¦UÃþ²Å¸¹¸ò¼Ð°O
+				//å„é¡žç¬¦è™Ÿè·Ÿæ¨™è¨˜
 				if( temp==9  ||  temp==10  || temp==13 ||  (temp>=32 && temp<=47)|| (temp>=58 && temp<=64) || (temp>=91 && temp<=96) || (temp>=123 && temp<=126) ||
 					temp==8739  || temp==65306 || temp==65307 || temp==8212  || temp==8231  || temp==65288 || temp==65289 || 
 					temp==65292 || temp==65311 || temp==12290 || temp==65281 || temp==12301 || temp==12300 || temp==8217
@@ -964,10 +971,10 @@ run://run:
 
 			delete ptr_nFilterRecord;
 			delete ptr_nFilterRecordForMark;
-			/*­p®Éµ²§ô*/  QueryPerformanceCounter(&nEndTime);    timeT+=(double)(nEndTime.QuadPart-nBeginTime.QuadPart)/(double)nFreq.QuadPart;count++;if(count%1==0){ printf("\nReplacing time:%f\n",timeT/count); timeT=0;count=0;}
+			/*è¨ˆæ™‚çµæŸ*/  QueryPerformanceCounter(&nEndTime);    timeT+=(double)(nEndTime.QuadPart-nBeginTime.QuadPart)/(double)nFreq.QuadPart;count++;if(count%1==0){ printf("\nReplacing time:%f\n",timeT/count); timeT=0;count=0;}
 
 			
-			wcout<<endl<<L"¹LÂo«á:"<<endl<<wsOutput<<endl;;
+			wcout<<endl<<L"éŽæ¿¾å¾Œ:"<<endl<<wsOutput<<endl;;
 
 			myfile.open (sOutputFile);
 			myfile << wstring_to_utf8(wsOutput);
