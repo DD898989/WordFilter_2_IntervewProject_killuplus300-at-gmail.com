@@ -67,6 +67,7 @@ inline bool gt256(uint256_t *number1, uint256_t *number2) {
 	}
 	return gt128(&UPPER_P(number1), &UPPER_P(number2));
 }
+
 #pragma endregion
 //---------------------------------------------------------------------------------------------------
 inline uint64_t  wsto64(wstring wsWord)
@@ -221,12 +222,11 @@ public:
 			y->rightchild = insert_node;
 		}
 	}
-	 void DeleteBST(uint64_t KEY)
+	 bool DeleteBST(uint64_t KEY)
 	 {     
 		TreeNode64 *delete_node = Search(KEY);
 		if (delete_node == NULL) {
-			cout << "data not found.\n";
-			return;
+			return false;
 		}
 
 		TreeNode64 *y = 0;   
@@ -262,6 +262,7 @@ public:
 		}
 		delete y; 
 		y = 0;
+		return true;
 	}
 };
 //---------------------------------------------------------------------------------------------------
@@ -348,12 +349,11 @@ public:
 			y->rightchild = insert_node;
 		}
 	}
-	void DeleteBST(uint128_t KEY){  
+	bool DeleteBST(uint128_t KEY){  
 
 		TreeNode128 *delete_node = Search(KEY);
 		if (delete_node == NULL) {
-			cout << "data not found.\n";
-			return;
+			return false;
 		}
 
 		TreeNode128 *y = 0;
@@ -390,6 +390,7 @@ public:
 
 		delete y; 
 		y = 0;
+		return true;
 	}
 };
 //---------------------------------------------------------------------------------------------------
@@ -476,12 +477,11 @@ public:
 			y->rightchild = insert_node;
 		}
 	}
-	void DeleteBST(uint256_t KEY){  
+	bool DeleteBST(uint256_t KEY){  
 
 		TreeNode256 *delete_node = Search(KEY);
 		if (delete_node == NULL) {
-			cout << "data not found.\n";
-			return;
+			return false;
 		}
 
 		TreeNode256 *y = 0;
@@ -518,6 +518,7 @@ public:
 
 		delete y; 
 		y = 0;
+		return true;
 	}
 };
 //---------------------------------------------------------------------------------------------------
@@ -549,7 +550,7 @@ wstring Read(string filename)
 	wss << wif.rdbuf();
 	return wss.str();
 }
-
+//---------------------------------------------------------------------------------------------------
 inline int GetKeyFromWS(wstring ws)
 {
 	int len=ws.length();
@@ -601,7 +602,7 @@ inline bool IsBadWord(wstring ws)
 	}
 }
 //---------------------------------------------------------------------------------------------------
-void  RemoveBadWord(wstring ws)
+bool  RemoveBadWord(wstring ws)
 {
 	int len=ws.length();
 	int KeySum=GetKeyFromWS(ws);
@@ -609,19 +610,19 @@ void  RemoveBadWord(wstring ws)
 	{
 		uint64_t u64;
 		u64 = wsto64(ws);
-		m_T64[len-1][KeySum].DeleteBST(u64);
+		return m_T64[len-1][KeySum].DeleteBST(u64);
 	}
 	else if(len<7)
 	{
 		uint128_t u128;
 		u128 = wsto128(ws);
-		m_T128[len-4][KeySum].DeleteBST(u128);
+		return m_T128[len-4][KeySum].DeleteBST(u128);
 	}
 	else
 	{
 		uint256_t u256;
 		u256 = wsto256(ws);
-		m_T256[len-7][KeySum].DeleteBST(u256);
+		return m_T256[len-7][KeySum].DeleteBST(u256);
 	}
 }
 //---------------------------------------------------------------------------------------------------
@@ -824,9 +825,7 @@ int main()
 		case (int)E_REMOVE:
 			cout<<"請輸入 "<<m_vCmd[cmd]<<" ："<<endl;
 			wsRemove = wcinRegMatch(L"^.{1,12}$");
-			RemoveBadWord(wsRemove);
-			RemoveBadWord(wsRemove);
-			RemoveBadWord(wsRemove);
+			while(RemoveBadWord(wsRemove)){};
 			goto es;
 			//---------------------------------------------
 		case (int)E_ADD:
