@@ -24,6 +24,6 @@ So we can store wstring into a binary:
 ![](https://github.com/DD898989/Pictures/blob/master/tree.PNG)   
   
 For less space operation, we might make three classes for these wstring:  
-`BST64   m_T64;`   this tree for wstring length of 1~3  
-`BST128 m_T128;`   this tree for wstring length of 4~6  
-`BST256 m_T256;`   this tree for wstring length of 7~12  
+`BST64   m_T64;`   this tree for wstring length of 1-3  
+`BST128 m_T128;`   this tree for wstring length of 4-6  
+`BST256 m_T256;`   this tree for wstring length of 7-12  
