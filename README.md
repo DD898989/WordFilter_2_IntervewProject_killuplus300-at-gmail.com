@@ -21,7 +21,7 @@ wstring length less than 13 could be stored by a 256 bits type
   
 Binary Tree
 --
-#### So we can store wstring into a binary:  
+#### So we can store wstring into a binary tree:  
 ![](https://github.com/DD898989/Pictures/blob/master/tree.PNG)   
   
 #### For less space operation, we might make three classes for these wstring:  
