@@ -694,22 +694,6 @@ void ReadBadWordDic(string sDicFile)
 	clock_t t2 = clock();   	/*///////////////////////////////////////////*/  printf("%s:%f\n", "Reading Time: ",(t2-t1)/(double)(CLOCKS_PER_SEC));
 }
 //---------------------------------------------------------------------------------------------------
-string cinRegMatch(string sMatch)
-{
-	while(true)
-	{
-		string buffer;
-		getline(cin, buffer);
-		regex rx(sMatch);
-		smatch m;
-		string str = buffer;
-		if(regex_search(str, m, rx))
-		{
-			return buffer;
-		}
-	}
-}
-//---------------------------------------------------------------------------------------------------
 wstring wcinRegMatch(wstring sMatch)
 {
 	locale::global(locale(""));
