@@ -81,10 +81,10 @@ Analysis
 ##### y-axis　　　: average finished time(second)
 ![](https://github.com/DD898989/Pictures/blob/master/t1.png)<br/>
 As expetected, Time ∝ Input<br/>
-
-
-
-
+<br/>
+<br/>
+<br/>
+<br/>
 ##### input length: 550
 ##### filter cases　: 216000
 ##### x-axis　　　: trees
@@ -92,10 +92,10 @@ As expetected, Time ∝ Input<br/>
 ![](https://github.com/DD898989/Pictures/blob/master/t2.png)<br/>
 Time and trees should be in inverse proportion but it doesn't, it depends on how filter cases `KeySum` looks like<br/>
 ps. the memory doesn't seem to have relation with trees<br/>
-
-
-
-
+<br/>
+<br/>
+<br/>
+<br/>
 ##### input length: 550
 ##### trees　　　: 120
 ##### x-axis　　　: filter cases
