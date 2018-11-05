@@ -78,7 +78,7 @@ Analysis
 ##### trees　　　: 6000
 ##### filter cases　: 216000
 ##### x-axis　　　: input length(chars)
-##### y-axis　　　: average finished time(second)
+##### y-axis　　　: average finish time(second)
 ![](https://github.com/DD898989/Pictures/blob/master/t1.png)<br/>
 As expetected, Time ∝ Input<br/>
 <br/>
@@ -88,7 +88,7 @@ As expetected, Time ∝ Input<br/>
 ##### input length: 550
 ##### filter cases　: 216000
 ##### x-axis　　　: trees
-##### y-axis　　　: average finished time(second)
+##### y-axis　　　: average finish time(second)
 ![](https://github.com/DD898989/Pictures/blob/master/t2.png)<br/>
 Time and trees should be in inverse proportion but it doesn't, it depends on how filter cases `KeySum` looks like<br/>
 ps. the memory doesn't seem to have relation with trees<br/>
@@ -99,7 +99,7 @@ ps. the memory doesn't seem to have relation with trees<br/>
 ##### input length: 550
 ##### trees　　　: 120
 ##### x-axis　　　: filter cases
-##### y-axis　　　: average finished time(second)
+##### y-axis　　　: average finish time(second)
 ![](https://github.com/DD898989/Pictures/blob/master/t3.png)<br/>
 As expetected, Time ∝ filter cases<br/>
 
